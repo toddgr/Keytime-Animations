@@ -23,7 +23,7 @@
 
 // title of these windows:
 
-const char *WINDOWTITLE = { "Keytime Animation Demo -- Joe Graphics" };
+const char *WINDOWTITLE = { "Project 6 -- Grace Todd" };
 const char *GLUITITLE   = { "User Interface Window" };
 
 
@@ -574,8 +574,60 @@ InitLists( void )
 			glRotatef( ax,  1., 0., 0. );
 			glRotatef( ay,  0., 1., 0. );
 			glRotatef( az,  0., 0., 1. );
-			glutWireTorus( RADIUS1, RADIUS2, 10, 10 );
+			glScalef(50., 50., 50.);
+			glutWireDodecahedron();
 		glPopMatrix( );
+	}
+
+	{
+		float xpos = Xpos.GetValue(3.);
+		float ypos = Ypos.GetValue(3.);
+		float zpos = Zpos.GetValue(3.);
+		float ax = ThetaX.GetValue(3.);
+		float ay = ThetaY.GetValue(3.);
+		float az = ThetaZ.GetValue(3.);
+		glPushMatrix();
+		glTranslatef(xpos, ypos, zpos);
+		glRotatef(ax, 1., 0., 0.);
+		glRotatef(ay, 0., 1., 0.);
+		glRotatef(az, 0., 0., 1.);
+		glScalef(50., 50., 50.);
+		glutWireDodecahedron();
+		glPopMatrix();
+	}
+
+	{
+		float xpos = Xpos.GetValue(5.);
+		float ypos = Ypos.GetValue(5.);
+		float zpos = Zpos.GetValue(5.);
+		float ax = ThetaX.GetValue(5.);
+		float ay = ThetaY.GetValue(5.);
+		float az = ThetaZ.GetValue(5.);
+		glPushMatrix();
+		glTranslatef(xpos, ypos, zpos);
+		glRotatef(ax, 1., 0., 0.);
+		glRotatef(ay, 0., 1., 0.);
+		glRotatef(az, 0., 0., 1.);
+		glScalef(50., 50., 50.);
+		glutWireDodecahedron();
+		glPopMatrix();
+	}
+
+	{
+		float xpos = Xpos.GetValue(7.);
+		float ypos = Ypos.GetValue(7.);
+		float zpos = Zpos.GetValue(7.);
+		float ax = ThetaX.GetValue(7.);
+		float ay = ThetaY.GetValue(7.);
+		float az = ThetaZ.GetValue(7.);
+		glPushMatrix();
+		glTranslatef(xpos, ypos, zpos);
+		glRotatef(ax, 1., 0., 0.);
+		glRotatef(ay, 0., 1., 0.);
+		glRotatef(az, 0., 0., 1.);
+		glScalef(50., 50., 50.);
+		glutWireDodecahedron();
+		glPopMatrix();
 	}
 
 	{
@@ -590,7 +642,8 @@ InitLists( void )
 			glRotatef(ax, 1., 0., 0.);
 			glRotatef(ay, 0., 1., 0.);
 			glRotatef(az, 0., 0., 1.);
-			glutWireTorus(RADIUS1, RADIUS2, 10, 10);
+			glScalef(50., 50., 50.);
+			glutWireDodecahedron();
 		glPopMatrix();
 	}
 
@@ -606,7 +659,8 @@ InitLists( void )
 		glMaterialf ( GL_BACK, GL_SHININESS, 5.f );
 		glMaterialfv( GL_BACK, GL_EMISSION, Array3( 0., 0., 0. ) );
 		glMaterialfv( GL_FRONT, GL_EMISSION, Array3( 0., 0., 0. ) );
-		glutSolidTorus( RADIUS1, RADIUS2, 10, 10 );
+		glScalef(50., 50., 50.);
+		glutSolidDodecahedron();
 	glEndList( );
 
 	// create the walls:

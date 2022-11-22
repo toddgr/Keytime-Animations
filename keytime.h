@@ -23,7 +23,7 @@ public:
 	void	AddTimeValue( float, float );
 	float	GetFirstTime( );
 	float	GetLastTime( );
-	int	GetNumKeytimes( );
+	int		GetNumKeytimes( );
 	float	GetValue( float );
 	void	PrintTimeValues( );
 };
